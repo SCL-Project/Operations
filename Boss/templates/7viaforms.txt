@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse: collapse;">
+      <tr>
+        <td align="center" bgcolor="#FFFFFF" style="padding: 0;">
+          <img src="https://i.imgur.com/G9NkCBX.png" alt="Header Image" class="img-responsive" style="display: block; width: 600px; height: auto;" width="600">
+        </td>
+      </tr>
+
+      <td bgcolor="#FFFFFF" style="padding: 0; color: #1F2937;">
+<table width="100%" style="background-color: #F0F0F0; color: #1F2937;">
+  <tr>
+    <td style="padding: 20px;">
+      <p>Dear {name},</p>
+      <p>Thank you for your interest in the thesis opportunity in the framework of the Smart Contracts Lab. We
+        appreciate your enthusiasm and dedication to this field.</p>
+      <p>To ensure that your application is processed efficiently, we kindly ask you to follow the applica-tion
+        procedure as described below:</p>
+      <ol>
+        <li>Go to the website: <a href="https://www.econ.uzh.ch/en/people/faculty/ewerhart.html">Christian Ewerhart |
+            Department of Economics | UZH</a></li>
+        <li>At the bottom of the Website, click on "Application to blockchain Project".</li>
+        <li>Once you are there, you will have access to all the necessary information about the appli-cation process.
+        </li>
+        <style>
+          .nested-list {
+            margin-top: 10px;
+            /* Adjust the margin as desired */
+          }
+        </style>
+        <li>Fill out the Application Form and upload the following documents:
+          <ul class="nested-list">
+            <li>CV, preferably with a photograph</li>
+            <li>Transcript of Records ("Notenauszug")</li>
+            <li>Letter of motivation</li>
+          </ul>
+        </li>
+      </ol>
+      <p>Please submit these documents to us as soon as possible so that we may continue processing your application. If
+        you have any questions or concerns, please do not hesitate to contact us.</p>
+      <p>We value your interest in the Smart Contracts Lab and hope to receive your complete application soon.</p>
+      <p>Kind Regards,</p>
+      <p style="font-weight: bold;">Operations Team<br>
+        SCL Student Project</p>
+    </td>
+  </tr>
+</table>
+<!-- 
+  <table width="100%" style="background-color: #006837; color: #FFFFFF;">
+    <tr>
+      <td style="padding: 20px 0; text-align: center;">
+        <p style="margin-bottom: 5px;">&copy; 2023 Smart Contracts Lab</p>
+      </td>
+    </tr>
+  </table>
+</body>
+-->
+
+</html>
+{Subject: Your Application - Update}
+{ButtonTitle: Via Forms}

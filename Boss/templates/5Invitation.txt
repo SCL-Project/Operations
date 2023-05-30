@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="margin: 0; padding: 0;">
+  <center>
+    <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="border-collapse: collapse;">
+      <tr>
+        <td align="center" bgcolor="#FFFFFF" style="padding: 0;">
+          <img src="https://i.imgur.com/G9NkCBX.png" alt="Header Image" class="img-responsive" style="display: block; width: 600px; height: auto;" width="600">
+        </td>
+      </tr>
+
+      <td bgcolor="#FFFFFF" style="padding: 0; color: #1F2937;">
+        <table width="100%" style="background-color: #F0F0F0; color: #1F2937;">
+          <tr>
+            <td style="padding: 20px;">
+        <p>Dear {name},</p>
+        <p>Thank you for your interest in the thesis opportunity in the framework of the Smart Contracts Lab.</p>
+        <p>We would like to invite you to participate in the next information session. The event will take place onsite at UZH.
+        </p>
+        <p style="font-weight: bold;">Date: {date} at {time}</p>
+        <p style="font-weight: bold;">Room: {room}</p>
+        <p>Please note that this invite is not a confirmation of your thesis. You will first have a general presentation on the
+          Project, and then undergo a bilateral interview.
+          The event is an opportunity for you to get to know us and for us to get to know you, to see if there is a mutual fit.
+        </p>
+        <p>If you have any questions or remarks, please don't hesitate to contact us.</p>
+        <p>We are looking forward to getting to know you.</p>
+        <p>Kind Regards,</p>
+        <p style="font-weight: bold;">Operations Team<br>
+                SCL Student Project</p>
+                            </td>
+          </tr>
+        </table>
+        <!-- 
+  <table width="100%" style="background-color: #006837; color: #FFFFFF;">
+    <tr>
+      <td style="padding: 20px 0; text-align: center;">
+        <p style="margin-bottom: 5px;">&copy; 2023 Smart Contracts Lab</p>
+      </td>
+    </tr>
+  </table>
+</body>
+-->
+
+</html>
+
+{Subject: Invitation to the info session}
+{ButtonTitle: Info-fix}
