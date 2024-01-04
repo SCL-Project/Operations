@@ -49,20 +49,49 @@ async def send_brochure(update: Update, context: CallbackContext):
     with open(BROCHURE_PATH, 'rb') as file:
         await context.bot.send_document(chat_id=query.message.chat_id, document=file)
 
+def load_registered_users(csv_file):
+    user_ids = set()
+    try:
+        with open(csv_file, mode='r', newline='') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if row:  # Check if row is not empty
+                    user_id = row[0]  # Assuming the user ID is the first column
+                    user_ids.add(int(user_id))
+    except FileNotFoundError:
+        logger.error(f"File not found: {csv_file}")
+    except Exception as e:
+        logger.error(f"Error reading CSV file: {e}")
+
+    return list(user_ids)
+
+def is_user_registered(user_id, csv_file):
+    with open(csv_file, mode='r', newline='') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row and row[0] == str(user_id):
+                return True
+    return False
+
 async def handle_message(update: Update, context: CallbackContext):
     user = update.effective_user
     if update.message.text:
-        # Save user's message to CSV
-        with open(CSV_FILE, 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([user.id, user.first_name, user.last_name, update.message.text])
+        # Check if user is already registered
+        if not is_user_registered(user.id, CSV_FILE):
+            # New user: save user's message to CSV and notify the Taskforce for confirmation
+            with open(CSV_FILE, 'a', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow([user.id, user.first_name, user.last_name, update.message.text])
 
-        # Notify the Taskforce
-        keyboard = [[InlineKeyboardButton("Confirm", callback_data=f'confirm_{user.id}')]]
-        reply_markup = InlineKeyboardMarkup(keyboard)
-        await context.bot.send_message(chat_id=TASKFORCE_CHAT_ID,
-                                       text=f"New joiner details:\n\n{update.message.text}\n\nConfirm the user?",
-                                       reply_markup=reply_markup)
+            keyboard = [[InlineKeyboardButton("Confirm", callback_data=f'confirm_{user.id}')]]
+            reply_markup = InlineKeyboardMarkup(keyboard)
+            await context.bot.send_message(chat_id=TASKFORCE_CHAT_ID,
+                                           text=f"New joiner details:\n\n{update.message.text}\n\nConfirm the user?",
+                                           reply_markup=reply_markup)
+        else:
+            # Existing user: forward their message to the Taskforce
+            await context.bot.send_message(chat_id=TASKFORCE_CHAT_ID,
+                                          text=f"Message from user {user.id} ({user.first_name} {user.last_name}):\n\n{update.message.text}")
 
 async def confirm_user(update: Update, context: CallbackContext):
     query = update.callback_query
