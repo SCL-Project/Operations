@@ -28,8 +28,8 @@ async def start(update: Update, context: CallbackContext):
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text(
         "Hello and Welcome to Smart Contracts Lab Onboarding Bot,\n\n"
-        "This bot is here to help you with your Onboarding process.\n"
-        "Before we can start please input your Name, Surname, UZH Email address, matriculation number. "
+        "This bot is here to help you with your onboarding process.\n"
+        "Before we can start please input your name, surname, UZH email address and matriculation number. "
         "You will get another message when this Chat is ready to use.\n\n"
         "Further informations will be provided when the onboarding week gets closer"
         "You can also get the Onboarding Schedule and Welcome Brochure below.\n\n"
