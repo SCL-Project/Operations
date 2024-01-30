@@ -9,7 +9,7 @@ contract CryptoCollectibleCreator is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    // Event declaration
+    // Event logging
     event CollectibleMinted(address indexed owner, uint256 indexed tokenId);
 
     constructor() ERC721("CryptoCollectibleCreator", "CCC") {}
@@ -21,7 +21,7 @@ contract CryptoCollectibleCreator is ERC721URIStorage {
         _mint(msg.sender, newItemId);
         _setTokenURI(newItemId, tokenURI);
 
-        // Emit the event after minting the NFT
+        // Emit the event after the minting of a NFT
         emit CollectibleMinted(msg.sender, newItemId);
 
         return newItemId;
