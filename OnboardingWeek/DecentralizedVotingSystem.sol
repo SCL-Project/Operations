@@ -3,11 +3,11 @@ pragma solidity ^0.8.0;
 
 contract VotingSystem {
     mapping(uint => uint) public votes; // Maps participant ID to their vote count
-    mapping(address => bool) public hasVoted; // Tracks whether an address has voted
+    mapping(address => bool) public hasVoted; // Tracks whether an address has voted or not
 
-    uint public votingEnd; // Timestamp when voting ends
+    uint public votingEnd; // Timestamp of the blockchain when voting ends
     uint public winner; // ID of the winning participant
-    bool public votingFinished; // Flag to indicate if voting has ended
+    bool public votingFinished; // Boolndicate if voting has ended
 
     event Voted(address voter, uint participant);
     event VotingEnded(uint winningParticipant);

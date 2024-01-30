@@ -16,11 +16,11 @@ def check_price(crypto, threshold):
 
 def main():
     crypto = "bitcoin"
-    threshold = 20000  # Set your threshold price here
+    threshold = 40000  # Sets the threshold price here
 
     while True:
         check_price(crypto, threshold)
-        time.sleep(60)  # Checks the price every 60 seconds
+        time.sleep(60)  # Checks the price of bitcoin every 60 seconds
 
 if __name__ == "__main__":
     main()
