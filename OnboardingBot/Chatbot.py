@@ -14,11 +14,11 @@ TOKEN = '6706420741:AAEe9m9FoVZHSNiENuSKO2NHylCCoo9aL1A'
 TASKFORCE_CHAT_ID = -1001998746458
 
 # CSV file path for storing user data
-CSV_FILE = 'OnboardingBot/confirmed_users.csv'
+CSV_FILE = 'confirmed_users.csv'
 
 # File paths
-SCHEDULE_PATH = 'OnboardingBot/Schedule.png'
-BROCHURE_PATH = 'OnboardingBot/Welcome Brochure.pdf'
+SCHEDULE_PATH = 'Schedule.png'
+BROCHURE_PATH = 'Welcome Brochure.pdf'
 
 async def start(update: Update, context: CallbackContext):
     keyboard = [
