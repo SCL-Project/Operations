@@ -16,29 +16,23 @@ The bot increases the efficiency and automatization of the operational process o
 ## Setup
 
 1. **Clone the repository**:
-Via GitHub Desktop or *git clone <https://github.com/SCL-Project/Operations/tree/main/OnboardingBot>*
+Via GitHub Desktop or
+*git clone <https://github.com/SCL-Project/Operations/tree/main/OnboardingBot>*
+
 2. **Install dependencies**:
-Ensure you have Python 3.8 or newer installed. Then, install the required packages using pip:
-*pip install python-telegram-bot --upgrade*
+Ensure you have Python 3.8 or newer installed. Then, install the required packages using pip:  
+*pip install python-telegram-bot --upgrade*  
+
 3. **Configuration**:
 - Set the `TOKEN` variable in the script to the bot token you received from BotFather.
 - Update the `TASKFORCE_CHAT_ID` with your task force group chat ID.
 - Adjust the `CSV_FILE`, `SCHEDULE_PATH`, and `BROCHURE_PATH` variables as needed.
 
-## Running the Bot
-
-Execute the script with Python:
-3. **Configuration**:
-- Set the `TOKEN` variable in the script to the bot token you received from BotFather.
-- Update the `TASKFORCE_CHAT_ID` with your task force group chat ID.
-- Adjust the `CSV_FILE`, `SCHEDULE_PATH`, and `BROCHURE_PATH` variables as needed.
-
-## Running the Bot
-
-Execute the script with Python:
+4. **Running the Bot**
+Execute the script with Python:  
 *python <script-name>.py*
 
-## Commands
+5. **Commands**
 
 - `/start`: Sends the welcome message with the onboarding resources.
 - `/reply USER_ID MESSAGE`: Allows the task force to reply to a specific user's inquiry (task force group chat only).
