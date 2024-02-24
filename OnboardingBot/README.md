@@ -16,7 +16,7 @@ The bot increases the efficiency and automatization of the operational process o
 ## Setup
 
 1. **Clone the repository**:
-Via GitHub Desktop or *git clone <[repository-url](https://github.com/SCL-Project/Operations/tree/main/OnboardingBot)>*
+Via GitHub Desktop or *git clone <https://github.com/SCL-Project/Operations/tree/main/OnboardingBot>*
 2. **Install dependencies**:
 Ensure you have Python 3.8 or newer installed. Then, install the required packages using pip:
 *pip install python-telegram-bot --upgrade*
