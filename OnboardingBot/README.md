@@ -30,7 +30,7 @@ Ensure you have Python 3.8 or newer installed. Then, install the required packag
 
 4. **Running the Bot**
 Execute the script with Python:  
-*python <Chatbot>.py*
+*python Chatbot.py*
 
 5. **Commands**
 
