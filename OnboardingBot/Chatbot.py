@@ -144,7 +144,7 @@ async def broadcast_to_users(update: Update, context: CallbackContext):
         await update.message.reply_text("Usage: /broadcast MESSAGE")
 
 
-def error(update: Update, context: CallbackContext):
+async def error(update: Update, context: CallbackContext):
     """Log Errors caused by Updates."""
     logger.warning('Update "%s" caused error "%s"', update, context.error)
 
@@ -158,9 +158,7 @@ def main() -> None:
     brochure_handler = CallbackQueryHandler(send_brochure, pattern='^get_brochure$')
     reply_handler = CommandHandler("reply", reply_to_user, filters.Chat(chat_id=TASKFORCE_CHAT_ID))
     broadcast_handler = CommandHandler("broadcast", broadcast_to_users, filters.Chat(chat_id=TASKFORCE_CHAT_ID))
-    confirm_handler = CallbackQueryHandler(confirm_user, pattern='^confirm_')
     
-    application.add_handler(confirm_handler)
     application.add_handler(broadcast_handler)
     application.add_handler(start_handler)
     application.add_handler(message_handler)
